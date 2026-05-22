@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProCalc Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SmartCalc Studio</h1>
+  <p>Advanced Calculator • Internship Project</p>
+</header>
+
+<main class="container">
+
+  <!-- Calculator -->
+  <section class="calculator">
+    <input id="display" readonly placeholder="0">
+
+    <div class="buttons">
+      <button onclick="clearAll()" class="op">AC</button>
+      <button onclick="deleteLast()" class="op">DEL</button>
+      <button onclick="add('%')" class="op">%</button>
+      <button onclick="add('/') " class="op">÷</button>
+
+      <button onclick="add('7')">7</button>
+      <button onclick="add('8')">8</button>
+      <button onclick="add('9')">9</button>
+      <button onclick="add('*')" class="op">×</button>
+
+      <button onclick="add('4')">4</button>
+      <button onclick="add('5')">5</button>
+      <button onclick="add('6')">6</button>
+      <button onclick="add('-')" class="op">−</button>
+
+      <button onclick="add('1')">1</button>
+      <button onclick="add('2')">2</button>
+      <button onclick="add('3')">3</button>
+      <button onclick="add('+')" class="op">+</button>
+
+      <button onclick="add('0')" class="zero">0</button>
+      <button onclick="add('.')">.</button>
+      <button onclick="calculate()" class="equal">=</button>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section class="history">
+    <div class="history-header">
+      <h2>Calculation History</h2>
+      <button onclick="clearHistory()">Clear</button>
+    </div>
+    <ul id="historyList"></ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>Frontend Project • HTML | CSS | JavaScript</p>
+  <p>Designed & Developed by Syeda  Quratulain Kazmi</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
