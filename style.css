@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:20px;
+  animation: fadeDown 1s ease;
+}
+
+header h1{
+  font-size:42px;
+  letter-spacing:2px;
+}
+
+/* MAIN */
+.container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  padding:20px;
+}
+
+/* CALCULATOR */
+.calculator{
+  width:340px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  animation: pop 0.8s ease;
+}
+
+#display{
+  width:100%;
+  height:70px;
+  font-size:28px;
+  text-align:right;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  margin-bottom:15px;
+  background:#111;
+  color:#00ffcc;
+  box-shadow: inset 0 0 10px rgba(0,255,200,0.2);
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+button{
+  height:60px;
+  border:none;
+  border-radius:12px;
+  font-size:20px;
+  cursor:pointer;
+  transition:0.2s;
+  background:white;
+}
+
+button:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 10px #00ffcc;
+}
+
+.op{
+  background:#ff9f1c;
+  color:white;
+}
+
+.equal{
+  background:#2ed573;
+  color:white;
+}
+
+.zero{
+  grid-column:span 2;
+}
+
+/* HISTORY */
+.history{
+  width:260px;
+  padding:20px;
+  border-radius:15px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+  animation: slide 1s ease;
+}
+
+.history-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.history ul{
+  list-style:none;
+  margin-top:10px;
+}
+
+.history li{
+  padding:8px;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  font-size:14px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes pop{
+  from{transform:scale(0.5); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+@keyframes fadeDown{
+  from{transform:translateY(-50px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes slide{
+  from{transform:translateX(50px); opacity:0;}
+  to{transform:translateX(0); opacity:1;}
+}
